@@ -1,3 +1,7 @@
+if(process.env.NODE_ENV !== "production"){
+    require('dotenv').config();
+}
+//console.log(process.env.SECRET)
 const express = require('express');
 const path = require('path');
 const ejsMate = require('ejs-mate')
@@ -83,3 +87,11 @@ app.use((err,req,res,next) =>{
 app.listen(3000, ()=>{
     console.log('Listening to port 3000')
 })
+
+/*
+npm install cloudinary@1.41.3
+
+npm install multer-storage-cloudinary@4.0.0
+
+npm install multer@1.4.5-lts.1
+*/
