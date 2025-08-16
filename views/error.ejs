@@ -7,10 +7,12 @@
                 <p>
                     <%= err.message %>
                 </p>
-                <% if (err.stack) { %>
-                    <hr>
-                    <pre><%= err.stack %></pre>
-                    <% } %>
+                <% if(process.env.NODE_ENV !=="production" ) { %>
+                    <% if (err.stack) { %>
+                        <hr>
+                        <pre><%= err.stack %></pre>
+                        <% } %>
+                            <% } %>
             </div>
             <a href="/" class="btn btn-outline-danger mt-3">Back to Home</a>
         </div>
